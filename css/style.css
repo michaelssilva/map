@@ -1,0 +1,93 @@
+html,
+body {
+    height: 100vh;
+}
+
+#backarea {
+    height: 100%;
+    background-color: #6783e6  ;
+    border: 2px solid #EE9A11;
+}
+
+#searchinput {
+    font-size: 14pt;
+    height: 35px;
+    width: 260px;
+}
+
+#formElement {
+    margin: 3% 5% 5% 3%;
+    padding: 1% 1% 1% 1%;
+}
+
+.row,
+#map,
+#list-view,
+.container-fluid {
+    height: 100%;
+}
+
+
+
+h2 {
+    color: #309FE7  ;
+    font-family: 'Dancing Script', cursive;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+h3 {
+    color: #161D4E;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+h4 {
+    color: #2A221C;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+ul li {
+    margin: 2px;
+    padding: 1%;
+    color: #88E23D  ;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+ul li:hover {
+    font-size: 23px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: #EE9A11;
+}
+
+footer {
+    height: 40px;
+    text-align: center;
+    color: #56645D;
+    border-style: solid;
+    border-color: #EE9A11;
+    background-color: #FCF3CF  ;
+}
+
+.adicionar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.adicionar >button{
+    display: flex;
+    width: 200px;
+    background-color: #ee5311;
+    border: none;
+    justify-content: center;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 24px;
+    font-weight: 900;
+}

@@ -1,0 +1,11 @@
+[
+    { "name": "Echoenergia", "lat": -23.622313339449093, "lng": -46.700372031051174, "isFavorite": false, "icon": "images/echo.ico" },
+    { "name": "Salhô", "lat": -23.625152952820176, "lng": -46.69890530401969, "isFavorite": false, "icon": "images/restaurante.png" },
+    { "name": "Mineiro", "lat": -23.62592190394225, "lng": -46.69864182414607, "isFavorite": false, "icon": "images/restaurante.png" },
+    { "name": "Alecrim", "lat": -23.625047049665827, "lng": -46.700331750373664, "isFavorite": false, "icon": "images/restaurante.png" },
+    { "name": "Terraço", "lat": -23.627879062462824, "lng": -46.70035504441161, "isFavorite": false, "icon": "images/restaurante.png" },
+    { "name": "Paulinho's Garden", "lat": -23.62552372575066, "lng": -46.699415477719555, "isFavorite": false, "icon": "images/restaurante.png" },
+    { "name": "Esquina", "lat": -23.62536626355098, "lng": -46.699312223418666, "isFavorite": false, "icon": "images/bar.png" },
+    { "name": "Seu Abreu Bar", "lat": -23.625189223885872, "lng": -46.70073944926716, "isFavorite": false, "icon": "images/bar.png" },
+    { "name": "Morumbi Shopping", "lat": -23.623101242440214, "lng": -46.69877566400361, "isFavorite": false, "icon": "images/loja.png" }
+]
