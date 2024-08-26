@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -7,65 +8,97 @@
     <meta http-equiv="X-Frame-Options" content="deny">
     <title>Mapa IM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- own css file -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Google fonts -->
-   <!--  <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Dancing+Script" rel="stylesheet">
 </head>
 
 <body>
     <div class="container-fluid">
-        <!-- container-fluid start -->
-        <header>
-            <!-- header start -->
-        </header>
-        <!-- header end -->
+        <header></header>
         <div class="row" id="backarea">
-            <!-- row start -->
             <div class="col-md-3">
-                <!-- column 1 start -->
                 <div class="row" id="formElement">
-                    <h2> Favioritos de IM</h2>
+                    <h2>Favoritos de IM</h2>
                     <div>
-                        <!-- knockout binding on search box-->
                         <input type="text" id="searchinput" data-bind="textInput : search, event: {keyup: filter}" placeholder="Procurar" autocomplete="on">
                     </div>
                     <div>
                         <br>
                         <h4>Locais:</h4>
-                        <!-- knockout binding on location list-->
-                        <ul type="square" data-bind="foreach: visible">
+                        <ul class="locais" type="square" data-bind="foreach: visible">
                             <li data-bind="text: name, click: $parent.showMarker"></li>
                         </ul>
                     </div>
                     <div class="adicionar">
-                        <button>Acionar Local</button>
-                    </ul>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="botao">
+                            Adicionar Local
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Formulário de Cadastro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <!-- Formulário Bootstrap -->
+                                <form>
+                                    <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Digite o nome do local">
+                                    </div>
+                                    <div class="mb-3">
+                                    <label for="latitude" class="form-label">Latitude</label>
+                                    <input type="text" class="form-control" id="latitude" placeholder="Digite a latitude">
+                                    </div>
+                                    <div class="mb-3">
+                                    <label for="longitude" class="form-label">Longitude</label>
+                                    <input type="text" class="form-control" id="longitude" placeholder="Digite a longitude">
+                                    </div>
+                                    <div class="mb-3">
+                                    <label for="icon" class="form-label">Ícone</label>
+                                    <input type="text" class="form-control" id="icon" placeholder="URL do ícone">
+                                    </div>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+  
+
                     </div>
                 </div>
             </div>
-            <!-- column 1 end -->
-            <div class="col-md-9" id="map">
-                <!-- column 2 start -->
-            </div>
+            <div class="col-md-9" id="map"></div>
         </div>
-        <!-- column 2 end-->
-        </div>
-        <!-- row end -->
     </div>
+    
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Knockout JS -->
     <script src="js/knockout-3.2.0.js"></script>
+    
+    <!-- jQuery (pode ser removido se não for necessário) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script  src="js/jQuery-min.js"></script>
-    <script  src="js/oauth-signature.min.js"></script>
-    <script  src="app.js"></script>
-    <script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDicWjE8Q_t-V6-AS4GC_EK42LkGJJsaSM&v=3&callback=initMap" onerror="googleError()">
-    </script>
-
+    <!-- App JS -->
+    <script src="app.js"></script>
+    
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDicWjE8Q_t-V6-AS4GC_EK42LkGJJsaSM&v=3&callback=initMap"></script>
 </body>
 
 </html>

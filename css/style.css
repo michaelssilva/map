@@ -1,4 +1,9 @@
-html,
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     height: 100vh;
 }
@@ -13,11 +18,8 @@ body {
     font-size: 14pt;
     height: 35px;
     width: 260px;
-}
-
-#formElement {
-    margin: 3% 5% 5% 3%;
-    padding: 1% 1% 1% 1%;
+    margin: 0;
+    padding-left: 5px;
 }
 
 .row,
@@ -35,6 +37,7 @@ h2 {
     font-style: normal;
     font-size: 32px;
     font-weight: bolder;
+    padding-top: 10px;
 }
 
 h3 {
@@ -51,7 +54,6 @@ h4 {
 
 ul li {
     margin: 2px;
-    padding: 1%;
     color: #88E23D  ;
     font-family: 'Architects Daughter', cursive;
     font-size: 24px;
@@ -64,25 +66,16 @@ ul li:hover {
     color: #EE9A11;
 }
 
-footer {
-    height: 40px;
-    text-align: center;
-    color: #56645D;
-    border-style: solid;
-    border-color: #EE9A11;
-    background-color: #FCF3CF  ;
-}
-
 .adicionar{
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 100px;
 }
 
-.adicionar >button{
+#botao{
     display: flex;
     width: 200px;
+    height: 50px;
     background-color: #ee5311;
     border: none;
     justify-content: center;
@@ -90,4 +83,13 @@ footer {
     font-family: 'Architects Daughter', cursive;
     font-size: 24px;
     font-weight: 900;
+    border: none;
+}
+
+.locais{
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 0;
 }
